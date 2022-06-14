@@ -1,0 +1,41 @@
+<div class="container bg-white">
+    <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <div class="container-fluid p-0">
+            <a class="navbar-brand text-uppercase fw-800" href="#"><span
+                    class="border-red pe-2">New</span>Products</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav"
+                aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- <span class="fas fa-bars"></span> -->
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <div class="navbar-nav ms-auto">
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        
+    </div>
+    <div class="row">
+        <ng-container  *ngFor = "let product of products">
+            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3" (click)="showProduct(product.pk)">
+                <div class="product">
+                    <img src={{product.fields.url}}
+                    alt="">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                    </ul>
+                </div>
+                <div class="tag bg-red">sale</div>
+                <div class="title pt-4 pb-1">{{product.fields.product_name}}</div>
+                <div class="d-flex align-content-center justify-content-center">
+                    
+                </div>
+                <div class="price">$ {{product.fields.price}}</div>
+            </div>
+        </ng-container>
+       
+</div>

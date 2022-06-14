@@ -1,0 +1,152 @@
+<div class="container mt-5 mb-5">
+    <div class="row d-flex justify-content-center">
+    <div class="col-md-10">
+    <div class="card">
+    <div class="row">
+    <div class="col-md-6">
+    <div class="images p-3">
+    <div class="text-center p-4"> <img id="main-image" src= {{product.fields.url}} width="600" /> </div>
+    <!-- <div class="thumbnail text-center"> <img onclick="change_image(this)" src="https://i.imgur.com/Rx7uKd0.jpg" width="70"> <img onclick="change_image(this)" src="https://i.imgur.com/Dhebu4F.jpg" width="70"> </div> -->
+    </div>
+    </div>
+    <div class="col-md-6">
+    <div class="product p-4 pad">
+    <div class="d-flex justify-content-between align-items-center">
+    </div>
+    <div class="mt-4 mb-3"> <span class="text-uppercase text-muted brand">Orianz</span>
+        <br>
+        <br>
+    <h5 class="text-uppercase">{{product.fields.product_name}}</h5>
+    <br>
+    <div class="price d-flex flex-row align-items-center"> <span class="act-price">${{product.fields.price}}</span>
+    <div class="ml-2"> <small class="dis-price">$59</small> <span> 40% OFF</span> </div>
+    </div>
+    </div>
+    <p class="about">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla velrs complete the look.</p>
+    <div class="sizes mt-5">
+        Standard: 18 May, 3:00PM - 7:30PM
+
+    <!-- <h6 class="text-uppercase">Pack Size</h6> <label class="radio"> <input type="radio" name="size" value="S" checked> <span>S</span> </label> <label class="radio"> <input type="radio" name="size" value="M"> <span>1</span> </label> <label class="radio"> <input type="radio" name="size" value="L"> <span>2</span> </label> <label class="radio"> <input type="radio" name="size" value="XL"> <span>XL</span> </label> <label class="radio"> <input type="radio" name="size" value="XXL"> <span>XXL</span> </label> -->
+    </div>
+    <div class="cart mt-4 align-items-center"> <button class="btn btn-danger text-uppercase mr-2 px-4">Add to cart</button> </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div> 
+
+
+    <div class="container bg-white">
+        <nav class="navbar navbar-expand-md navbar-light bg-white">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand text-uppercase fw-800" href="#"><span
+                        class="border-red pe-2">Similar</span>Product</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav"
+                    aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fas fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="myNav">
+                    <div class="navbar-nav ms-auto">
+                        <!-- <a class="nav-link active" aria-current="page" href="#">All</a>
+                        <a class="nav-link" href="#">Women's</a>
+                        <a class="nav-link" href="#">Men's</a>
+                        <a class="nav-link" href="#">Kid's</a>
+                        <a class="nav-link" href="#">Accessories</a>
+                        <a class="nav-link" href="#">Cosmetics</a> -->
+                    </div>
+                </div>
+            </div>
+        </nav>
+     
+
+
+    <div class="row">
+        <ng-container  *ngFor = "let product of similar">
+            <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+                <div class="product">
+                    <img src={{product.fields.url}}
+                    width="400"
+                    height="400"
+                    alt="" style="margin: 30px">
+                    <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                        <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                        <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                        <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                    </ul>
+                </div>
+                <div class="tag bg-red">sale</div>
+                <div class="title pt-4 pb-1">{{product.fields.product_name}}</div>
+                <div class="d-flex align-content-center justify-content-center">
+                    <span class="fas fa-star"></span>
+                    <span class="fas fa-star"></span>
+                    <span class="fas fa-star"></span>
+                    <span class="fas fa-star"></span>
+                    <span class="fas fa-star"></span>
+                </div>
+                <div class="price">$ {{product.fields.price}}</div>
+            </div>
+        </ng-container>
+       
+</div>
+
+
+
+<div class="container bg-white">
+    <nav class="navbar navbar-expand-md navbar-light bg-white">
+        <div class="container-fluid p-0">
+            <a class="navbar-brand text-uppercase fw-800" href="#"><span
+                    class="border-red pe-2">Frequently Bougth together</span>Product</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNav"
+                aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fas fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="myNav">
+                <div class="navbar-nav ms-auto">
+                    <!-- <a class="nav-link active" aria-current="page" href="#">All</a>
+                    <a class="nav-link" href="#">Women's</a>
+                    <a class="nav-link" href="#">Men's</a>
+                    <a class="nav-link" href="#">Kid's</a>
+                    <a class="nav-link" href="#">Accessories</a>
+                    <a class="nav-link" href="#">Cosmetics</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+ 
+
+
+<div class="row">
+    <ng-container  *ngFor = "let product of freq">
+        <div class="col-lg-3 col-sm-6 d-flex flex-column align-items-center justify-content-center product-item my-3">
+            <div class="product">
+                <img src={{product.fields.url}}
+                width="400"
+                height="400"
+                alt="" style="margin: 30px">
+                <ul class="d-flex align-items-center justify-content-center list-unstyled icons">
+                    <li class="icon"><span class="fas fa-expand-arrows-alt"></span></li>
+                    <li class="icon mx-3"><span class="far fa-heart"></span></li>
+                    <li class="icon"><span class="fas fa-shopping-bag"></span></li>
+                </ul>
+            </div>
+            <div class="tag bg-red">sale</div>
+            <div class="title pt-4 pb-1">{{product.fields.product_name}}</div>
+            <div class="d-flex align-content-center justify-content-center">
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+                <span class="fas fa-star"></span>
+            </div>
+            <div class="price">$ {{product.fields.price}}</div>
+        </div>
+    </ng-container>
+   
+</div>
+
+
+
+
+
